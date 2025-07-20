@@ -1,0 +1,37 @@
+{
+  "name": "frontend-web3",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run build:wasm && next build",
+    "build:wasm": "cd zk && make build-wasm && node ../scripts/copy-wasm.js",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@privy-io/react-auth": "^2.16.0",
+    "@privy-io/wagmi": "^1.0.5",
+    "@wagmi/core": "^2.17.3",
+    "@zk-kit/baby-jubjub": "^1.0.3",
+    "maci-crypto": "^2.5.0",
+    "next": "15.3.4",
+    "poseidon-lite": "^0.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "snarkjs": "^0.7.5",
+    "viem": "^2.31.7",
+    "wagmi": "^2.15.6"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
